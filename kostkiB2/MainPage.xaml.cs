@@ -39,6 +39,17 @@
 
 
         }
+
+        private void CheckedChanged(object sender, CheckedChangedEventArgs e)
+        {
+            RadioButton rb = (RadioButton)sender;
+
+            int maxRoll = int.Parse((string)rb.Value);
+            
+            string fileName = "k" + maxRoll + ".jpg";
+
+            bitcoin.Source = fileName;
+        }
     }
 
 }
